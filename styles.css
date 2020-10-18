@@ -5,15 +5,19 @@ body {
 
 .assignment {
     display:flex;
-    padding: 10px;
-    margin: 10px;
-    background:lightgray
+    padding:10px;
+    margin:10px;
+    margin-bottom: 30px;
+    background:lightgray;
+    border-radius:5px;
+    box-shadow: 5px 8px #401201;
 }
 
 .assignment img {
-    width: 200px;
+    width:200px;
     border: 2px solid #F2E0C9;
-    margin-right:20px
+    margin-right:20px;
+    border-radius:5px;
 }
 
 h1 {
@@ -25,3 +29,8 @@ a{
     text-decoration:none;
     color:#556B2f;
 }
+
+.assignment a:hover {
+    color:#401201;
+}
+    

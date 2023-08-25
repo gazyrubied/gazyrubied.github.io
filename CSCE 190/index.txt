@@ -43,3 +43,14 @@
         </section>
     </body>
 </html>
+
+<!-- Storyboard Assignment -->
+        <section class="assignment">
+            <a href="File/CombineStoryboard"><img src="images/StoryBoardFirstPage1></a>
+            <section class="ass-details">
+                <a href="File/CombineStoryboard"><h2>Storyboard: Brian Wiliks</h2></a>
+                <p>
+                    An illustration of what the expense manager app does.
+                </p>
+            </section>
+        </section>

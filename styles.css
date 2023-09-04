@@ -1,31 +1,33 @@
 body {
-    background: rgb(215, 235, 229);
+    background: #b3dad1;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 #info{
-background: #9ec9d2;
+
 width: 70%;
 }
 
 /* Navigation Links */
 a {
     text-decoration: none; 
-    color: rgb(0, 102, 204); 
+    color: #1E90FF; 
     font-weight: bold; 
 }
-
+a:hover {
+    color: #0077B6;
+}
 /* Typography */
 h1 {
-    color: rgb(92, 81, 71);
+    color: #333333;
 
 }
 
 h2 {
-    color: rgb(1, 51, 1);
+    color: #0077B6;
     font-size: 20px;
 }
 
 h3 {
-    color: rgb(128, 0, 128); 
+    color: #1E90FF; 
     font-weight: bold; 
 }

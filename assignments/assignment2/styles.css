@@ -1,9 +1,17 @@
 body {
-    background: #96d2fccc;
     font-family: Georgia, 'Times New Roman', Times, serif;
     padding: 0;
+    background: url(images/background-img.jpg);
+    background-size: cover;
+   
 }
-
+#infor{
+    background: rgba(81, 155, 215, 0.8);
+    width: 70%;
+    margin: auto;
+    padding:5px;
+    border-radius: 4px;
+}
 /* Navigation */
 a {
     text-decoration: none; 
@@ -15,6 +23,11 @@ a {
 }
 a:hover{
     background: #7b78a9;
+    padding: 5px;
+}
+img{
+    padding: px;
+    border-radius: 5px;
 }
 
 /* Tables */
@@ -37,12 +50,12 @@ td{
 
 /* Typography */
 h1 {
-    color: #031124;
+    color: #01070f;
     font-style: italic; 
 }
 
 h2 {
-    color: #0a577a;
+    color: #133d50;
 }
 
 h3 {

@@ -2,6 +2,10 @@ body {
     background: rgb(215, 235, 229);
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
+#info{
+background: #9ec9d2;
+width: 70%;
+}
 
 /* Navigation Links */
 a {

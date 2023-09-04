@@ -13,11 +13,12 @@ a {
 /* Typography */
 h1 {
     color: rgb(92, 81, 71);
-    font-style: italic; 
+
 }
 
 h2 {
     color: rgb(1, 51, 1);
+    font-size: 20px;
 }
 
 h3 {

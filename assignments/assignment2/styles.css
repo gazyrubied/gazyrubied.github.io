@@ -1,0 +1,51 @@
+body {
+    background: #96d2fccc;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 0;
+}
+
+/* Navigation */
+a {
+    text-decoration: none; 
+    background: #519bd7;
+    color: rgb(14, 1, 21); 
+    font-weight: bold; 
+    padding: 5px;
+    border-radius: 3px;
+}
+a:hover{
+    background: #7b78a9;
+}
+
+/* Tables */
+table{
+    border-collapse:collapse;
+    width: 100%;
+}
+th, td{
+    border: 1px solid;  
+    padding: 8px;
+}
+
+th{
+    background: #88b5c1;
+}
+
+td{
+    background: #4f7589;
+}
+
+/* Typography */
+h1 {
+    color: #031124;
+    font-style: italic; 
+}
+
+h2 {
+    color: #0a577a;
+}
+
+h3 {
+    color: #92bbc7; 
+    font-weight: bold; 
+}

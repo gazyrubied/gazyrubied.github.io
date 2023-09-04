@@ -1,0 +1,26 @@
+body {
+    background: rgb(215, 235, 229);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* Navigation Links */
+a {
+    text-decoration: none; 
+    color: rgb(0, 102, 204); 
+    font-weight: bold; 
+}
+
+/* Typography */
+h1 {
+    color: rgb(92, 81, 71);
+    font-style: italic; 
+}
+
+h2 {
+    color: rgb(1, 51, 1);
+}
+
+h3 {
+    color: rgb(128, 0, 128); 
+    font-weight: bold; 
+}

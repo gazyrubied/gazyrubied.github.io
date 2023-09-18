@@ -57,10 +57,11 @@ h3 {
 #main-header h3{
     font-size: 30px;
 }
-@media(min-width: 900px){
+@media only screen and (max-width: 900px){
     #assignments,
     .flex-container{
         display: flex;
+        flex-direction: column;
     }
 }
 .flex-container {

@@ -37,11 +37,17 @@ body {
 .flexbox-container > div button#button-move {
     text-align: left; 
 }
-
+footer {
+    text-align: center;
+    background-color: antiquewhite;
+    padding: 5px;
+}
 .hide {
     display: none;
 }
-
+#comment-section{
+    flex-direction: column;
+}
 .moving {
     position: relative;
     animation-name: anim-emoji;
@@ -62,7 +68,7 @@ body {
         top: 75px;
     }
     100% {
-        top: 0px;
+        transform: none;
     }
 }
 

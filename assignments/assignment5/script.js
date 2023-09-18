@@ -10,6 +10,7 @@ const makeMove = () => {
     document.getElementById("emoji").classList.add("moving");
 }
 
+
 window.onload = () => {
     document.getElementById("button-show").onclick = showGhost;
     document.getElementById("button-hide").onclick = hideGhost;

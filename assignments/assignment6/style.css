@@ -1,0 +1,21 @@
+body{
+    font-size: large;
+}
+h1{
+    text-align: center;
+
+}
+#main-header{
+    background-color: aqua;
+}
+#exercise-1{
+    float: left;
+    width: 50%;
+}
+#exercise-2{
+    float: right;
+    width: 50%;
+}
+.hide{
+    display: none;
+}

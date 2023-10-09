@@ -1,0 +1,60 @@
+body {
+    background-color: rgb(143, 173, 148);
+    font-family: Arial, Helvetica, sans-serif;
+}
+h2{
+    text-align: center;
+
+}
+
+#quote-container {
+    height: 30vw;
+    width: 90vh;
+    background-color: rgb(101, 160, 219);
+    border: 4px solid black;
+    padding: 10px;
+}
+
+#rainbow-container {
+    height: 30vw;
+    width: 90vh;
+    background-color: rgb(101, 160, 219);
+    border: 4px solid black;
+    padding: 10px;
+}
+#quotes{
+    font-size: larger;
+}
+#rainbow-button{
+    font-size:16px;
+    border-radius: 10px;
+    background-color: rgb(149, 117, 117);
+    padding: 10px;
+    cursor: pointer;
+}
+#rainbow{
+    width: 100%;
+    height: 100px; 
+}
+.rainbow-color{
+    width: 550px;
+    margin: auto;
+    height: 25px;
+}
+#potofGold{
+    width: 100px;
+    height: 100px;
+    position: relative;
+    top: 5%;
+    right: -80%;
+}
+.hidden{
+    display: none;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between; 
+    margin: 60px;
+}
+

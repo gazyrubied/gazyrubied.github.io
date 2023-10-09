@@ -1,85 +1,63 @@
 body {
-    background: #b3dad1;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    display: flex;
+    background-color: #6ebcde;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(35, 52, 107);
+    margin: 0%;
+    padding: 0%;
+}
+a{
+    text-decoration: none;
+    color: #6ebcde;
+}
+footer {
     text-align: center;
-    justify-content: center;
+    padding: 10px;
+    color: white;
 }
-#info{
-width: 70%;
-text-align: center;
-}
-
-footer{
-    list-style: none;
-    margin:0px;
-    padding:0px;
-    
-}
-a {
-    text-decoration: none; 
-    color: #505961; 
-    font-weight: bold; 
-    font-size: 20px;
-}
-a:hover {
-    color: #0077B6;
-}
-
-#main-header{
+#main-header {
     text-align: center;
-}
-h1 {
-    color: #333333;
-
-}
-
-h2 {
-    color: #0077B6;
-    font-size: 30px;
-    text-align: center;
-    margin: top 20px;
+    background-color: rgb(220, 220, 220);
+    padding: 15px;
+    margin: 30px;
+    border-radius: 10px;
 }
 
-h3 {
-    color: #1E90FF; 
-    font-weight: bold; 
-}
 
-#assignments{
-    display:flex;
-    flex-direction: column;
-    padding:5px;
-}
-#main-header h2{
-    font-size: 50px;
-}
-#main-header h3{
-    font-size: 30px;
-}
-@media only screen and (max-width: 900px){
-    #assignments,
-    .flex-container{
-        display: flex;
-        flex-direction: column;
-    }
-}
-.flex-container {
-    display: flex;
-    background-color: #b3dad1;
-    align-items: center;
-
-}
-.flex-container > div{
-    background-color: #d2e1ee;
+.assignment {
+    background: rgb(228, 222, 222);
+    border-radius: 10px;
+    border: 5px solid rgb(100, 119, 125);
     margin: 10px;
-    padding: 20px; 
-    
+    padding: 30px;
 }
-.assignment{
-    flex: 1;
-    border: 1px;
-    padding: 5px;
-    margin: 5px;
+img {
+    max-width: 150%;
+    background: lightcoral;
+    display: block;
+    margin: auto;
+    height: auto;
+    border: 5px solid rgb(139, 160, 168);
+}
+a:hover{
+    color: aqua;
+    text-decoration: none;
+}
+h1{
     text-align: center;
+}
+h2{
+    text-align: center;
+}
+@media only screen and (min-width: 900px) {
+    .flex-container {
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .assignment {
+        flex: 25%;
+        flex-grow: 0;
+    }
 }

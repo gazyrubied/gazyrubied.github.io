@@ -1,1 +1,0 @@
-const fundraising = document.getElementById('')

@@ -1,0 +1,53 @@
+header {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 1px;
+    background-color: antiquewhite;
+}
+.title {
+    font-size: 55px;
+    font-weight: bold;
+}
+.main-nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.main-nav ul li {
+    margin-right: 30px;
+}
+
+.main-nav a {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 26px;
+}
+h1 {
+    text-align: center;
+    background-color: antiquewhite;
+}
+
+.login-container {
+    text-align: center;
+}
+
+
+.login {
+    text-align: center;
+}
+
+#username, #password {
+    padding: 5px;
+    margin: 5px;
+    display: block; 
+    margin: 0 auto; 
+    font-size: 20px;
+}
+
+#log, #register {
+    padding: 5px 20px;
+    margin: 10px auto; 
+    text-align: center; 
+    width: auto; 
+}

@@ -1,0 +1,50 @@
+header {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 1px;
+    background-color: antiquewhite;
+}
+.title {
+    font-size: 55px;
+    font-weight: bold;
+}
+.main-nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.main-nav ul li {
+    margin-right: 30px;
+}
+
+.main-nav a {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 26px;
+}
+.movie-image{
+    margin-right: 150px;
+    align-items: center;
+}
+
+#new-movies {
+    margin-top: 50px; 
+    margin-left: 30px;
+    font-size: 30px;
+}
+#top-movies{
+    font-size: 30px;
+    margin-top: 00px;
+    margin-left: 30px;
+}
+#movie-search{
+    font-size: 20px;
+    margin-left: 1400px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+

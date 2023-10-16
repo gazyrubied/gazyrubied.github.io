@@ -4,6 +4,7 @@ body {
     color: rgb(35, 52, 107);
     margin: 0%;
     padding: 0%;
+    font-size: 30px;
 }
 a{
     text-decoration: none;
@@ -31,11 +32,11 @@ footer {
     padding: 30px;
 }
 img {
-    max-width: 150%;
+    max-width: 100%;
     background: lightcoral;
     display: block;
     margin: auto;
-    height: auto;
+    height: 200px;
     border: 5px solid rgb(139, 160, 168);
 }
 a:hover{

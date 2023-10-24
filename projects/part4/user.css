@@ -2,12 +2,22 @@ header {
     display: flex;
     justify-content: space-between; 
     align-items: center;
-    padding: 1px;
-    background-color: antiquewhite;
+    padding: 2px;
+    background-color: #3c3535;
+    color: white;
+}
+body{
+    background-color: #306BAC;
+    font-family: 'Helvetica', Arial, sans-serif;
+}
+p{
+    font-size: larger;
+    color: white;
 }
 .title {
-    font-size: 55px;
+    font-size: 36px;
     font-weight: bold;
+    text-decoration: underline;
 }
 .main-nav ul {
     list-style: none;
@@ -22,10 +32,13 @@ header {
     text-decoration: none;
     font-weight: bold;
     font-size: 26px;
+    background-color: #eee; 
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: black;
 }
 h1 {
     text-align: center;
-    background-color: antiquewhite;
 }
 
 .login-container {

@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="main.css">
-    <script src="script.js"></script>
     <title>CineReview</title>
 </head>
 <body>
@@ -14,7 +13,7 @@
                 <li><a href="movies.html">Movies</a></li>
                 <li><a href="review.html">Add Review</a></li>
                 <li><a href="top.html">About Us</a></li>
-                <li><a href="user.html">User Profile</a></li>
+                <li><a href="user.html">Contact Us</a></li>
             </ul>
         </nav>
     </header>
@@ -36,10 +35,11 @@
             <button type="submit">Submit Review</button>
         </form>
 
-    <div id="success" style="display: none;">
+    <div id="success" class="hidden">
         <h3>Your Review Has Been Submitted!</h3>
         <p>Your review:</p>
         <p id="review-content"></p>
+        <script src="script.js"></script>
     </div>
 </body>
 </html>

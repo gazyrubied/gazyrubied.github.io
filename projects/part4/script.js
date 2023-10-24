@@ -1,19 +1,25 @@
-const submitReview = (e) => {
-    e.preventDefault();
-    const form = document.getElementById("review-form");
+document.getElementById("review-form").addEventListener("submit", function (e) {
+    e.preventDefault(); 
+
+    const successContainer = document.getElementById("success");
+    const reviewContent = document.getElementById("review-content");
+
     const title = document.getElementById("review-title").value;
     const rating = document.getElementById("movie-rating").value;
     const reviewText = document.getElementById("movie-review-text").value;
     const tags = document.getElementById("movie-tags").value;
 
-    console.log(title);
-    console.log(rating);
-    console.log(reviewText);
-    console.log(tags);
-  
-    const successMessage = `Review Submitted: Title - ${title}, Rating - ${rating}, Review - ${reviewText}, Tags - ${tags}`;
-    document.getElementById("review-content").textContent = successMessage; 
-    document.getElementById("success").style.display = "block"; 
-};
+    const successMessage = `
+    Title: ${title}
+    Rating: ${rating}
+    Review: ${reviewText}
+    Tags: ${tags}
+    `;
 
-document.getElementById("review-form").onsubmit = submitReview;
+    reviewContent.textContent = successMessage;
+    successContainer.classList.remove("hidden");
+});
+
+document.getElementById("submit-button").addEventListener("click", function () {
+    document.getElementById("review-form").submit();
+});

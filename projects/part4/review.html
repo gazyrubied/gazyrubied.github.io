@@ -18,8 +18,19 @@
         </nav>
     </header>
     <div class="review-box">
-        <img src='images/aliens.jpg' class="review-image" data-image-name="aliens.jpg">
-        <form id="review-form">
+        <label for="genre-selector">Select Genre:</label>
+        <select id="genre-selector">
+            <option genre="all">All Genres</option>
+            <option genre="action">Action</option>
+            <option genre="comedy">Comedy</option>
+            <option genre="drama">Drama</option>
+            <option genre></option>
+
+        </select>
+
+        <div class="movies-list">
+          
+        </div>
             <label for="review-title">Title:</label>
             <input type="text" id="review-title" name="review-title" required/>
     

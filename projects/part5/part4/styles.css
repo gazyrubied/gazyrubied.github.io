@@ -1,0 +1,97 @@
+header {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 2px;
+    background-color: #3c3535;
+    color: white;
+}
+body{
+    background-color: #306BAC;
+    font-family: 'Helvetica', Arial, sans-serif;
+    align-items: center
+}
+p{
+    font-size: larger;
+    color: white;
+}
+.title {
+    font-size: 36px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+.main-nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.main-nav ul li {
+    margin-right: 30px;
+}
+
+.main-nav a {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 26px;
+    background-color: #eee; 
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: black;
+}
+
+h1 {
+    text-align: center;
+
+}
+
+.login-container {
+    margin: 50px auto;
+    max-width: 300px;
+    text-align: center;
+}
+.button-container{
+    display: flex;
+    justify-content: center;
+    
+}
+
+.login {
+    text-align: center;
+    margin: 10px 0;
+    font-size: 20px;
+    color: white;
+    
+}
+.buttons{
+    text-align: center;
+}
+
+#username, #password {
+    padding: 10px;
+    margin: 5px;
+    display: block; 
+    margin: 0 auto; 
+    font-size: 20px;
+    border: 1px solid #ccc; 
+    border-radius: 5px;
+    width: 50%;
+}
+
+#log, #register {
+    padding: 5px 20px;
+    margin: 20px ; 
+    width: auto;
+    border-radius: 5px;
+    
+}
+#site-toggle{
+    margin-top: 15px;
+}
+#menu-toggle div{
+    width: 30px;
+    height: 5px;
+    margin: 5px;
+}
+
+    
+

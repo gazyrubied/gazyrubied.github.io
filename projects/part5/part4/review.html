@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="main.css">
+    <title>CineReview</title>
+</head>
+<body>
+    <header>
+        <h1 class="title"><a href="homepage.html">CineReview</a></h1>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="homepage.html">Home Page</a></li>
+                <li><a href="movies.html">Movies</a></li>
+                <li><a href="review.html">Add Review</a></li>
+                <li><a href="top.html">About Us</a></li>
+                <li><a href="user.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="review-box">
+        <label for="genre-selector">Select Genre:</label>
+        <select id="genre-selector">
+            <option genre="all">All Genres</option>
+            <option genre="action">Action</option>
+            <option genre="comedy">Comedy</option>
+            <option genre="drama">Drama</option>
+            <option genre></option>
+
+        </select>
+
+        <div class="movies-list">
+          
+        </div>
+            <label for="review-title">Title:</label>
+            <input type="text" id="review-title" name="review-title" required/>
+    
+            <label for="movie-rating">Rating:</label>
+            <input type="number" id="movie-rating" name="review-rating" min="1" max="5" required />
+    
+            <label for="movie-review-text">Review:</label>
+            <textarea id="movie-review-text" name="review-text"  rows="5" required></textarea>
+            
+            <label for="movie-tags">Keywords:</label>
+            <input type="text" id="movie-tags" name="review-tags" required placeholder="e.g., comedy, suspense" />
+    
+            <button type="submit">Submit Review</button>
+        </form>
+
+    <div id="success" class="hidden">
+        <h3>Your Review Has Been Submitted!</h3>
+        <p>Your review:</p>
+        <p id="review-content"></p>
+        <script src="script.js"></script>
+    </div>
+</body>
+</html>

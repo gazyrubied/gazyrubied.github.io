@@ -1,0 +1,48 @@
+body {
+    background-color: rgb(89, 168, 168);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.movie {
+    display: flex;
+    flex-direction: column; 
+    border: 3px solid #ccc;
+    padding: 10px;
+    margin: 5px;
+    background-color: rgb(14, 114, 114);
+    align-items: flex-start; 
+    height: 450px;
+}
+.movie p {
+    margin: 3px;
+    word-wrap: break-word; 
+    font-size: 16px;
+    line-height: 1.1;
+    color: black;
+}
+h3{
+    font-size: 22px;
+}
+
+img {
+    max-width: 250px;
+    height: auto;
+    transition: transform 0.2s, filter 0.2s; 
+    margin-right: 20px;
+    border: 3px solid #ccc;
+}
+
+img:hover {
+    transform: scale(1.5);
+}
+
+@media screen and (max-width: 900px) {
+    .movie {
+        height: auto;
+        flex-direction: column; 
+    }
+
+    img {
+        margin: 0 auto 20px;
+    }
+}

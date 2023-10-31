@@ -21,13 +21,6 @@
         "image": "images/robot movie.jpg"
     },
     {
-        "title": "Haunting Shadows",
-        "director": "James Wan",
-        "cast": ["Vera Farmiga", "Patrick Wilson", "Ruairi O'Connor"],
-        "year": 2021,
-        "image": "images/scary movie.jpg"
-    },
-    {
         "title": "Space Odyssey",
         "director": "Ridley Scott",
         "cast": ["Matt Damon", "Jessica Chastain", "Kristen Wiig"],

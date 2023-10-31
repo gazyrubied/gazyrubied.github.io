@@ -12,7 +12,7 @@ const getMovies = async () => {
 
 const newMovie = async () => {
     let latest = await getMovies();
-    let movieSection = document.querySelector(".new-movies"); 
+    let movieSection = document.querySelector("new-movies"); 
 
     latest.forEach(movie => movieSection.appendChild(getMovieInfo(movie)));
 };
@@ -22,12 +22,13 @@ const getMovieInfo = (movie) => {
     movieDiv.classList.add("movies");
 
     const img = document.createElement('img');
-    img.src = `gazyrubied.github.io\projects\part5\json\images`; 
+    img.src = movie.image; 
     movieDiv.appendChild(img);
 
     const title = document.createElement('h3');
     title.textContent = movie.title;
     movieDiv.appendChild(title);
+    image.classList.add('new-movie-image');
 
     return movieDiv;
 };

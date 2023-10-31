@@ -22,7 +22,7 @@ const getMovieInfo = (movie) => {
     movieDiv.classList.add("movies");
 
     const img = document.createElement('img');
-    img.src = `https://gazyrubied.github.io/projects/part5/json/${movie.img}`; 
+    img.src = `gazyrubied.github.io\projects\part5\json\images`; 
     movieDiv.appendChild(img);
 
     const title = document.createElement('h3');

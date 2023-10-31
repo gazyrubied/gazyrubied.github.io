@@ -1,0 +1,14 @@
+[
+    {
+        "title": "Aliens",
+        "image": "images/aliens.jpg"
+    },
+    {
+        "title": "Space Movie",
+        "image": "images/space_movie.jpg"
+    },
+    {
+        "title": "Star Movie",
+        "image": "images/star_movie.jpg"
+    }
+]

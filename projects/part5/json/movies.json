@@ -14,10 +14,10 @@
         "image": "images/space movie.jpg"
     },
     {
-        "title": "Stellar Quest",
-        "director": "William Davis",
-        "cast": ["Robert Anderson", "Jessica Parker", "Daniel Evans"],
-        "year": 2013,
-        "image": "images/star movie.jpg"
+        "title": "Sinister 6",
+        "director": "Quentin Tarantino",
+        "cast": ["Leonardo DiCaprio", "Brad Pitt", "Margot Robbie"],
+        "year": 2019,
+        "image": "images/western movie.jpg"
     }
 ]

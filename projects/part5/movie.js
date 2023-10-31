@@ -15,9 +15,13 @@ const displayMovies = async () => {
 
     movies.forEach(movie => {
         const movieDiv = document.createElement('div');
+        movieDiv.classList.add('movie-info');
         const link = document.createElement('a');
         const image = document.createElement('img');
         const title = document.createElement('h2');
+        const director = document.createElement('p');
+        const cast = document.createElement('p');
+        const year = document.createElement('p');
 
         link.href = 'review.html';
         image.src = movie.image;
@@ -25,11 +29,20 @@ const displayMovies = async () => {
         image.classList.add('movie-image');
 
         title.textContent = movie.title;
+        director.textContent = `Director: ${movie.director}`;
+        cast.textContent = `Cast: ${movie.cast.join(', ')}`;
+        year.textContent = `Year: ${movie.year}`;
+
+        title.textContent = movie.title;
 
         link.appendChild(image);
         movieDiv.appendChild(title);
+        movieDiv.appendChild(director);
+        movieDiv.appendChild(cast);
+        movieDiv.appendChild(year);
         movieDiv.appendChild(link);
         moviesContainer.appendChild(movieDiv);
+        
     });
 };
 

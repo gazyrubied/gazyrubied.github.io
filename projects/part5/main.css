@@ -52,7 +52,7 @@ a:hover{
 .movie-image {
     margin-right: 110px;
     align-items: center;
-    width: 400px;
+    width: 250px;
     height: auto;
     transition: transform 0.2s;
 }
@@ -82,7 +82,7 @@ a:hover{
 
 #movie-search {
     background-color: lightgray;
-    margin: 20px;
+    margin: 15px;
 }
 
 h1 {

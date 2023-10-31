@@ -1,32 +1,35 @@
+// movie.js
 const getMovies = async () => {
-    const link = "https://gazyrubied.github.io/json/review.json";
+    const link = "https://gazyrubied.github.io/projects/part5/json/latest.json";
 
     try {
         const response = await fetch(link);
         return await response.json();
-    } catch(error) {
+    } catch (error) {
         console.log(error);
     }
 };
 
-    const newMovies = moviesData.filter(movie => movie.year === 2023);
+const newMovie = async () => {
+    let latest = await getMovies();
+    let movieSection = document.querySelector(".new-movies"); 
 
-    const newMoviesContainer = document.getElementById('new-movies');
+    latest.forEach(movie => movieSection.appendChild(getMovieInfo(movie)));
+};
 
-    newMovies.forEach(movie => {
-        const movieDiv = document.createElement('div');
-        movieDiv.classList.add('new-image');
+const getMovieInfo = (movie) => {
+    let movieDiv = document.createElement("div");
+    movieDiv.classList.add("movies");
 
-        const movieLink = document.createElement('a');
-        movieLink.href = "review.html"; 
+    const img = document.createElement('img');
+    img.src = `https://gazyrubied.github.io/projects/part5/json/${movie.img}`; 
+    movieDiv.appendChild(img);
 
-        const movieImage = document.createElement('img');
-        movieImage.src = `https://gazyrubied.github.io/json/$movie.img`;
-        movieImage.alt = `${movie.title} Movie Poster`;
-        movieImage.classList.add('movie-image');
+    const title = document.createElement('h3');
+    title.textContent = movie.title;
+    movieDiv.appendChild(title);
 
-        movieLink.appendChild(movieImage);
-        movieDiv.appendChild(movieLink);
-        newMoviesContainer.appendChild(movieDiv);
-    });
-;
+    return movieDiv;
+};
+
+window.onload = newMovie; 

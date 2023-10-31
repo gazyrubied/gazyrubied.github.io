@@ -1,44 +1,44 @@
 [
     {
-        "title": "Dragon Movie",
+        "title": "Ember",
         "director": "Christopher Nolan",
         "cast": ["Tom Hanks", "Scarlett Johansson", "Morgan Freeman"],
         "year": 2014,
-        "image": "images/dragon_movie.jpg"
+        "image": "images/dragon movie.jpg"
     },
     {
-        "title": "Western Movie",
+        "title": "Sinister 6",
         "director": "Quentin Tarantino",
         "cast": ["Leonardo DiCaprio", "Brad Pitt", "Margot Robbie"],
         "year": 2019,
-        "image": "images/western_movie.jpg"
+        "image": "images/western movie.jpg"
     },
     {
-        "title": "Robot Movie",
+        "title": "Robots",
         "director": "Steven Spielberg",
         "cast": ["Will Smith", "Rosario Dawson", "Channing Tatum"],
         "year": 2022,
-        "image": "images/robot_movie.jpg"
+        "image": "images/robot movie.jpg"
     },
     {
-        "title": "Scary Movie",
+        "title": "Haunting Shadows",
         "director": "James Wan",
         "cast": ["Vera Farmiga", "Patrick Wilson", "Ruairi O'Connor"],
         "year": 2021,
-        "image": "images/scary_movie.jpg"
+        "image": "images/scary movie.jpg"
     },
     {
-        "title": "Space Movie",
+        "title": "Space Odyssey",
         "director": "Ridley Scott",
         "cast": ["Matt Damon", "Jessica Chastain", "Kristen Wiig"],
         "year": 2015,
-        "image": "images/space_movie.jpg"
+        "image": "images/space movie.jpg"
     },
     {
-        "title": "Star Movie",
+        "title": "Stellar Quest",
         "director": "J.J. Abrams",
         "cast": ["Daisy Ridley", "John Boyega", "Adam Driver"],
         "year": 2017,
-        "image": "images/star_movie.jpg"
+        "image": "images/star movie.jpg"
     }
 ]

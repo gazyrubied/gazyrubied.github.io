@@ -11,7 +11,9 @@ body {
     display: flex;
     flex-direction: column;
 }
-
+.movie h2{
+    font-size: 50px;
+}
 p {
     font-size: larger;
     color: white;
@@ -48,16 +50,23 @@ a:hover{
     border-radius: 5px;
     color: black;
 }
+#movies-container {
+    display: flex;
+    justify-content: space-around; 
+    align-items: center; 
+}
 
 .movie-image {
     margin-right: 110px;
-    align-items: center;
-    width: 200px;
+    align-items: right;
+    width: 300px;
     height: auto;
     transition: transform 0.2s;
+    transform: scale(1.1);
+    
 }
 
-.movie-image:hover {
+.movie-container:hover {
     transform: scale(1.1);
 }
 
@@ -67,12 +76,6 @@ a:hover{
     margin-top: 20px;
     margin-left: 120px;
     font-weight: bold;
-}
-
-#top-movies {
-    font-size: 30px;
-    margin-top: 20px;
-    margin-left: 120px;
 }
 
 #movie-search {

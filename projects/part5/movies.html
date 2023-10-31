@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="main.css">
-    <script src="movie.js"></script>
+    <script src="json.js"></script>
     <title>CineReview</title>
 </head>
 <body>
@@ -19,16 +19,19 @@
         </nav>
     </header>
     <div id="search">
-        <input type="search" id="movie-search" placeholder="Search movies">   
+        <input type="text" id="movie-search" placeholder="Search movies">   
     </div>
     <div id="new-movies">
         <p>Newest Movies</p>
-        <div class="new-movies"></div>  
+        <div class="new-image" id="new-movies-container">
+       
+        </div>  
     </div>
        
     <div id="top-movies">
         <p>Top Movies</p>  
-    <div class="top-movies"></div>
+        <div class="top-image" id="top-movies-container">
+         
+        </div>
     </div>
-</body>
 </html>

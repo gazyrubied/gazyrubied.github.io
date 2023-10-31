@@ -1,0 +1,44 @@
+[
+    {
+        "title": "Dragon Movie",
+        "director": "Christopher Nolan",
+        "cast": ["Tom Hanks", "Scarlett Johansson", "Morgan Freeman"],
+        "year": 2014,
+        "image": "images/dragon_movie.jpg"
+    },
+    {
+        "title": "Western Movie",
+        "director": "Quentin Tarantino",
+        "cast": ["Leonardo DiCaprio", "Brad Pitt", "Margot Robbie"],
+        "year": 2019,
+        "image": "images/western_movie.jpg"
+    },
+    {
+        "title": "Robot Movie",
+        "director": "Steven Spielberg",
+        "cast": ["Will Smith", "Rosario Dawson", "Channing Tatum"],
+        "year": 2022,
+        "image": "images/robot_movie.jpg"
+    },
+    {
+        "title": "Scary Movie",
+        "director": "James Wan",
+        "cast": ["Vera Farmiga", "Patrick Wilson", "Ruairi O'Connor"],
+        "year": 2021,
+        "image": "images/scary_movie.jpg"
+    },
+    {
+        "title": "Space Movie",
+        "director": "Ridley Scott",
+        "cast": ["Matt Damon", "Jessica Chastain", "Kristen Wiig"],
+        "year": 2015,
+        "image": "images/space_movie.jpg"
+    },
+    {
+        "title": "Star Movie",
+        "director": "J.J. Abrams",
+        "cast": ["Daisy Ridley", "John Boyega", "Adam Driver"],
+        "year": 2017,
+        "image": "images/star_movie.jpg"
+    }
+]

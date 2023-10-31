@@ -1,47 +1,30 @@
-const getMovies = async () => {
-    const link = "https://gazyrubied.github.io/json/movies.json";
-
+document.addEventListener('DOMContentLoaded', async function() {
+    const moviesContainer = document.getElementById('movies-container');
+  
     try {
-        const response = await fetch(link);
-        return await response.json();
+      const response = await fetch("https://gazyrubied.github.io/projects/part5/json/movie.json");
+      const movies = await response.json();
+  
+      movies.forEach(movie => {
+        const movieDiv = document.createElement('div');
+        const link = document.createElement('a');
+        const image = document.createElement('img');
+        const title = document.createElement('h2');
+  
+        link.href = `review.html?image=${encodeURI(movie.image)}`;
+        image.src = `images/${encodeURI(movie.image)}`;
+        image.alt = `${movie.title} Movie Poster`;
+        image.classList.add('movie-image');
+  
+        title.textContent = movie.title;
+  
+        link.appendChild(image);
+        movieDiv.appendChild(title);
+        movieDiv.appendChild(link);
+        moviesContainer.appendChild(movieDiv);
+      });
     } catch (error) {
-        console.log(error);
+      console.log(error);
     }
-};
-
-const showMovieInfo = async () => {
-    const moviesData = await getMovies();
-    const movieSelect = document.getElementById('movie-select');
-
-    moviesData.forEach(movie => {
-        const option = document.createElement('option');
-        option.value = movie.title;
-        option.textContent = movie.title;
-        movieSelect.appendChild(option);
-    });
-
-    movieSelect.addEventListener('change', async event => {
-        const selectedMovieTitle = event.target.value;
-        await displaySelectedMovieInfo(selectedMovieTitle, moviesData);
-    });
-};
-
-const displaySelectedMovieInfo = async (selectedMovieTitle, movies) => {
-    const selectedMovieTitleElement = document.getElementById('selected-movie-title');
-    const selectedMovieImageElement = document.getElementById('selected-movie-image');
-    const selectedMovieDescriptionElement = document.getElementById('selected-movie-description');
-
-    const selectedMovie = movies.find(movie => movie.title === selectedMovieTitle);
-
-    if (selectedMovie) {
-        selectedMovieTitleElement.textContent = selectedMovie.title;
-        selectedMovieImageElement.src = selectedMovie.image;
-        selectedMovieDescriptionElement.textContent = selectedMovie.description;
-    } else {
-        selectedMovieTitleElement.textContent = "No movie selected";
-        selectedMovieImageElement.src = "";
-        selectedMovieDescriptionElement.textContent = "";
-    }
-};
-
-window.onload = showMovieInfo();
+  });
+  

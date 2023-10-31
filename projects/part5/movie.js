@@ -11,32 +11,24 @@ const getMovies = async () => {
 
 const displayMovies = async () => {
     const moviesContainer = document.getElementById('movies-container');
-    const moviesData = await getMovies();
+    const movies = await getMovies();
 
-    moviesData.forEach(movie => {
+    movies.forEach(movie => {
         const movieDiv = document.createElement('div');
-        const title = document.createElement('h2');
-        const director = document.createElement('p');
-        const castList = document.createElement('ul');
+        const link = document.createElement('a');
         const image = document.createElement('img');
+        const title = document.createElement('h2');
 
-        title.textContent = movie.title;
-        director.textContent = "Director: " + movie.director;
-
-        movie.cast.forEach(actor => {
-            const castMember = document.createElement('li');
-            castMember.textContent = actor;
-            castList.appendChild(castMember);
-        });
-
+        link.href = 'review.html';
         image.src = movie.image;
         image.alt = `${movie.title} Movie Poster`;
+        image.classList.add('movie-image');
 
+        title.textContent = movie.title;
+
+        link.appendChild(image);
         movieDiv.appendChild(title);
-        movieDiv.appendChild(director);
-        movieDiv.appendChild(castList);
-        movieDiv.appendChild(image);
-        
+        movieDiv.appendChild(link);
         moviesContainer.appendChild(movieDiv);
     });
 };

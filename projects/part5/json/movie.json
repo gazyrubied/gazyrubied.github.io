@@ -26,12 +26,5 @@
         "cast": ["Matt Damon", "Jessica Chastain", "Kristen Wiig"],
         "year": 2015,
         "image": "images/space movie.jpg"
-    },
-    {
-        "title": "Stellar Quest",
-        "director": "J.J. Abrams",
-        "cast": ["Daisy Ridley", "John Boyega", "Adam Driver"],
-        "year": 2017,
-        "image": "images/star movie.jpg"
     }
 ]

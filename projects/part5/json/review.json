@@ -1,0 +1,73 @@
+
+[
+{
+    "title": "Parasite",
+    "year": 2019,
+    "director": "Bong Joon-ho",
+    "cast": ["Song Kang-ho", "Lee Sun-kyun", "Cho Yeo-jeong"],
+    "image": "images/parasite.jpg"
+  }
+  ,{
+    "title": "The Shape of Water",
+    "year": 2017,
+    "director": "Guillermo del Toro",
+    "cast": ["Sally Hawkins", "Doug Jones", "Michael Shannon"],
+    "image": "the_shape_of_water.jpg"
+  },
+  {
+    "title": "Moonlight",
+    "year": 2016,
+    "director": "Barry Jenkins",
+    "cast": ["Mahershala Ali", "Trevante Rhodes", "Naomie Harris"]
+  },
+  {
+    "title": "Mad Max: Fury Road",
+    "year": 2015,
+    "director": "George Miller",
+    "cast": ["Tom Hardy", "Charlize Theron", "Nicholas Hoult"]
+  },
+  {
+    "title": "The Grand Budapest Hotel",
+    "year": 2014,
+    "director": "Wes Anderson",
+    "cast": ["Ralph Fiennes", "F. Murray Abraham", "Mathieu Amalric"]
+  },
+  {
+    "title": "12 Years a Slave",
+    "year": 2013,
+    "director": "Steve McQueen",
+    "cast": ["Chiwetel Ejiofor", "Michael Kenneth Williams", "Michael Fassbender"]
+  },
+  {
+    "title": "The Artist",
+    "year": 2011,
+    "director": "Michel Hazanavicius",
+    "cast": ["Jean Dujardin", "Bérénice Bejo", "John Goodman"]
+  },
+  {
+    "title": "Oppenheimer",
+    "year": 2023,
+    "director": "Christopher Nolan",
+    "cast" : ["Cillian Murphy, Florence Pugh, Robert Downey Jr"]
+  },
+  {
+    "title": "Barbie",
+    "year": 2023,
+    "director": "Greta Gerwig",
+    "cast": ["Margot Robbie, Ryan Gosling, Will Ferrell"]
+  },
+  {
+    "title": "Spider-Man: Across the Spider-Verse",
+    "year": 2023,
+    "director": "Joaquim Dos Santos, Kemp Powers, Justin K. Thompson",
+    "cast": ["Shameik Moore", "Hailee Steinfeld", "Jake Johnson"]
+  },
+  {
+    "title": "Titanic",
+    "year": 1997,
+    "director": "James Cameron",
+    "cast": ["Leonardo DiCaprio", "Kate Winslet", "Billy Zane"]
+  }
+  
+ 
+]

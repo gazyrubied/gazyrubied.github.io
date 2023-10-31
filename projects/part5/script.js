@@ -23,3 +23,5 @@ document.getElementById("review-form").addEventListener("submit", function (e) {
 document.getElementById("submit-button").addEventListener("click", function () {
     document.getElementById("review-form").submit();
 });
+
+

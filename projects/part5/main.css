@@ -52,7 +52,7 @@ a:hover{
 .movie-image {
     margin-right: 110px;
     align-items: center;
-    width: 250px;
+    width: 200px;
     height: auto;
     transition: transform 0.2s;
 }

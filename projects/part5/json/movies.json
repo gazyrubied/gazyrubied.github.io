@@ -1,14 +1,23 @@
 [
     {
-        "title": "Aliens",
+        "title": "Galactic Encounters",
+        "director": "Alex Johnson",
+        "cast": ["John Smith", "Emily Johnson", "Michael Brown"],
+        "year": 2010,
         "image": "images/aliens.jpg"
     },
     {
-        "title": "Space Movie",
-        "image": "images/space_movie.jpg"
+        "title": "Cosmic Odyssey",
+        "director": "Emma Thompson",
+        "cast": ["Olivia Clark", "Henry White", "Sophie Turner"],
+        "year": 2017,
+        "image": "images/space movie.jpg"
     },
     {
-        "title": "Star Movie",
+        "title": "Stellar Quest",
+        "director": "William Davis",
+        "cast": ["Robert Anderson", "Jessica Parker", "Daniel Evans"],
+        "year": 2013,
         "image": "images/star_movie.jpg"
     }
 ]

@@ -12,7 +12,7 @@ const showCity = async () => {
         cityDiv.appendChild(h3);
 
         const img = document.createElement("img");
-        img.src = "http://localhost:3000/" + city.img
+        img.src = "https://node-city-vml2.onrender.com/" + city.img
         cityDiv.appendChild(img);
 
         const cityInfo = document.createElement("ul");
@@ -42,7 +42,7 @@ const showCity = async () => {
 
 const getCity = async () => {
     try {
-        return (await fetch("http://localhost:3000/api/city")).json();
+        return (await fetch("https://node-city-vml2.onrender.com/")).json();
     } catch (error) {
         console.log("error");
         return "";

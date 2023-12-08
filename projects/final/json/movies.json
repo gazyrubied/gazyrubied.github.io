@@ -10,18 +10,6 @@
       "image": "images/avatar.jpg"
     },
     {
-        "Title": "300",
-    "Year": "2006",
-    "Rated": "R",
-    "Released": "09 Mar 2007",
-    "Runtime": "117 min",
-    "Genre": "Action, Drama, Fantasy",
-    "Director": "Zack Snyder",
-    "Writer": "Zack Snyder (screenplay), Kurt Johnstad (screenplay), Michael Gordon (screenplay), Frank Miller (graphic novel), Lynn Varley (graphic novel)",
-    "Actors": "Gerard Butler, Lena Headey, Dominic West, David Wenham",
-    "image": "images/300.jpg"
-    },
-    {
         "Title": "The Avengers",
         "Year": "2012",
         "Rated": "PG-13",
@@ -45,5 +33,17 @@
             "Writer": "Terence Winter (screenplay), Jordan Belfort (book)",
             "Actors": "Leonardo DiCaprio, Jonah Hill, Margot Robbie, Matthew McConaughey",
             "image": "images/wolf.jpg"
+    },
+    {
+        "Title": "Interstellar",
+        "Year": "2014",
+        "Rated": "PG-13",
+        "Released": "07 Nov 2014",
+        "Runtime": "169 min",
+        "Genre": "Adventure, Drama, Sci-Fi",
+        "Director": "Christopher Nolan",
+        "Writer": "Jonathan Nolan, Christopher Nolan",
+        "Actors": "Ellen Burstyn, Matthew McConaughey, Mackenzie Foy, John Lithgow",
+        "image": "images/interstellar.jpg"
     }
 ]

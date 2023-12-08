@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="main.css">
+    <title>CineReview</title>
+</head>
+<body>
+    <header>
+        <h1 class="title"><a href="homepage.html">CineReview</a></h1>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="homepage.html">Home Page</a></li>
+                <li><a href="movies.html">Movies</a></li>
+                <li><a href="review.html">Add Review</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="user.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="review-box">
+        <form id="review-form">
+            <label for="review-title">Title:</label>
+            <input type="text" id="review-title" name="review-title" required/>
+
+            <label for="movie-select"> Movie:</label>
+            <select id="movie-select" name="movie-select">
+                <option value="">Select a movie</option>
+                <option value="Parasite">Parasite</option>
+                <option value="The Shape of Water">The Shape of Water</option>
+                <option value="Moonlight">Moonlight</option>
+                <option value="Mad Max: Fury Road">Mad Max: Fury Road</option>
+                <option value="The Grand Budapest Hotel">The Grand Budapest Hotel</option>
+                <option value="12 Years a Slave">12 Years a Slave</option>
+                <option value="The Artist">The Artist</option>
+
+            </select>
+
+            <label for="movie-rating">Rating:</label>
+            <input type="number" id="movie-rating" name="review-rating" min="1" max="5" required />
+
+            <label for="movie-review-text">Review:</label>
+            <textarea id="movie-review-text" name="review-text" rows="5" required></textarea>
+
+            <label for="movie-tags">Keywords:</label>
+            <input type="text" id="movie-tags" name="review-tags" required placeholder="e.g., comedy, suspense" />
+
+            <button type="submit">Submit Review</button>
+        </form>
+
+        <div class="selected-movie">
+            <h2 id="selected-movie-title"></h2>
+            <img id="selected-movie-image" src="" alt="Selected Movie Poster">
+            <p id="selected-movie-description"></p>
+        </div>
+
+        <div id="success" class="hidden">
+            <h3>Your Review Has Been Submitted!</h3>
+            <p>Your review:</p>
+            <p id="review-content"></p>
+            <script src="json.js"></script>
+        </div>
+    </div>
+</body>
+</html>

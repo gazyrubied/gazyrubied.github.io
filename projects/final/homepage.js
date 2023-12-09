@@ -25,7 +25,7 @@ const displayMovies = async () => {
         const rated = movie.Rated;
         const runtime = movie.Runtime;
 
-        link.href = '#'; // Use '#' as a placeholder for the modal
+        link.href = '#'; 
         image.src = movie.image;
         image.alt = `${movie.title} Movie Poster`;
         image.classList.add('movie-image');
@@ -76,6 +76,20 @@ const showModal = (title, director, cast, year, rated, runtime) => {
     modalContent.appendChild(yearElement);
     modalContent.appendChild(ratedElement);
     modalContent.appendChild(runtimeElement);
+
+    // Create a button element
+    const reviewButton = document.createElement('button');
+    reviewButton.textContent = 'Write a Review';
+    reviewButton.classList.add('review-button');
+
+    // Add an event listener to the button for navigation
+    reviewButton.addEventListener('click', () => {
+        // Redirect to the review page or any other desired page
+        window.location.href = 'review.html'; // Change 'review.html' to your desired page
+    });
+
+    // Append the button to the modal content
+    modalContent.appendChild(reviewButton);
 
     // Display the modal
     modal.style.display = 'block';

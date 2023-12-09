@@ -10,7 +10,7 @@
       "image": "images/avatar.jpg"
     },
     {
-        "Title": "The Avengers",
+        "title": "The Avengers",
         "Year": "2012",
         "Rated": "PG-13",
         "Released": "04 May 2012",
@@ -23,7 +23,7 @@
     },
     {
         
-            "Title": "The Wolf of Wall Street",
+            "title": "The Wolf of Wall Street",
             "Year": "2013",
             "Rated": "R",
             "Released": "25 Dec 2013",
@@ -35,7 +35,7 @@
             "image": "images/wolf.jpg"
     },
     {
-        "Title": "Interstellar",
+        "title": "Interstellar",
         "Year": "2014",
         "Rated": "PG-13",
         "Released": "07 Nov 2014",

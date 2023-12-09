@@ -1,36 +1,43 @@
 [
     {
-      "Title": "Avatar",
-      "Year": "2009",
-      "Rated": "PG-13",
-      "Released": "18 Dec 2009",
-      "Runtime": "162 min",
-      "Genre": "Action, Adventure, Fantasy",
-      "Director": "James Cameron"
+        "title": "Doctor Strange",
+        "Year": "2016",
+        "Rated": "R",
+        "Released": "04 Nov 2016",
+        "Runtime": "122 min",
+        "Genre": "Action, Adventure, Fantasy",
+        "Director": "Scott Derrickson",
+        "Actors": "Rachel McAdams, Benedict Cumberbatch, Mads Mikkelsen, Tilda Swinton",
+        "image": "images/strange.jpg"
     },
     {
-        "Title": "300",
-    "Year": "2006",
-    "Rated": "R",
-    "Released": "09 Mar 2007",
-    "Runtime": "117 min",
-    "Genre": "Action, Drama, Fantasy",
-    "Director": "Zack Snyder",
-    "Writer": "Zack Snyder (screenplay), Kurt Johnstad (screenplay), Michael Gordon (screenplay), Frank Miller (graphic novel), Lynn Varley (graphic novel)",
-    "Actors": "Gerard Butler, Lena Headey, Dominic West, David Wenham"
+        "title": "The Avengers",
+        "Year": "2012",
+        "Rated": "PG-13",
+        "Released": "04 May 2012",
+        "Runtime": "143 min",
+        "Genre": "Action, Sci-Fi, Thriller",
+        "Director": "Joss Whedon",
+        "Writer": "Joss Whedon (screenplay), Zak Penn (story), Joss Whedon (story)",
+        "Actors": "Robert Downey Jr., Chris Evans, Mark Ruffalo, Chris Hemsworth",
+        "image": "images/avengers.jpg"
     },
     {
         "title": "Robots",
-        "director": "Steven Spielberg",
-        "cast": ["Will Smith", "Rosario Dawson", "Channing Tatum"],
-        "year": 2022,
+        "Director": "Steven Spielberg",
+        "Rated": "R",
+        "Genre": "Action, Sci-Fi, Thriller",
+        "Runtime": "156 min",
+        "Actors": ["Will Smith", "Rosario Dawson", "Channing Tatum"],
+        "Release": 2022,
         "image": "images/robot movie.jpg"
     },
     {
         "title": "Space Odyssey",
-        "director": "Ridley Scott",
-        "cast": ["Matt Damon", "Jessica Chastain", "Kristen Wiig"],
-        "year": 2015,
+        "Director": "Ridley Scott",
+        "Genre": "Action, Sci-Fi, Thriller",
+        "Actors": ["Matt Damon", "Jessica Chastain", "Kristen Wiig"],
+        "Release": 2015,
         "image": "images/space movie.jpg"
     }
 ]

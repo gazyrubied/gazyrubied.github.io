@@ -1,13 +1,13 @@
 [
     {
-      "title": "Avatar",
-      "Year": "2009",
-      "Rated": "PG-13",
-      "Released": "18 Dec 2009",
-      "Runtime": "162 min",
-      "Genre": "Action, Adventure, Fantasy",
-      "Director": "James Cameron",
-      "image": "images/avatar.jpg"
+        "title": "Avatar",
+        "Year": "2009",
+        "Rated": "PG-13",
+        "Released": "18 Dec 2009",
+        "Runtime": "162 min",
+        "Genre": "Action, Adventure, Fantasy",
+        "Director": "James Cameron",
+        "image": "images/avatar.jpg"
     },
     {
         "title": "Doctor Strange",
@@ -33,17 +33,16 @@
         "image": "images/avengers.jpg"
     },
     {
-        
-            "title": "The Wolf of Wall Street",
-            "Year": "2013",
-            "Rated": "R",
-            "Released": "25 Dec 2013",
-            "Runtime": "180 min",
-            "Genre": "Biography, Comedy, Crime",
-            "Director": "Martin Scorsese",
-            "Writer": "Terence Winter (screenplay), Jordan Belfort (book)",
-            "Actors": "Leonardo DiCaprio, Jonah Hill, Margot Robbie, Matthew McConaughey",
-            "image": "images/wolf.jpg"
+        "title": "The Wolf of Wall Street",
+        "Year": "2013",
+        "Rated": "R",
+        "Released": "25 Dec 2013",
+        "Runtime": "180 min",
+        "Genre": "Biography, Comedy, Crime",
+        "Director": "Martin Scorsese",
+        "Writer": "Terence Winter (screenplay), Jordan Belfort (book)",
+        "Actors": "Leonardo DiCaprio, Jonah Hill, Margot Robbie, Matthew McConaughey",
+        "image": "images/wolf.jpg"
     },
     {
         "title": "Interstellar",
@@ -56,5 +55,29 @@
         "Writer": "Jonathan Nolan, Christopher Nolan",
         "Actors": "Ellen Burstyn, Matthew McConaughey, Mackenzie Foy, John Lithgow",
         "image": "images/interstellar.jpg"
+    },
+    {
+        "title": "Gretel & Hansel",
+        "Year": 2020,
+        "Actors": [
+            "Sophia Lillis", "Sammy Leakey", "Charles Babalola", "Jessica De Gouw", "Alice Krige"
+        ],
+        "genres": ["Fantasy", "Horror"],
+        "image": "images/hansel.jpg"
+    },
+    {
+        "title": "Sonic the Hedgehog",
+        "Year": 2020,
+        "cast": [
+            "James Marsden",
+            "Ben Schwartz",
+            "Tika Sumpter",
+            "Natasha Rothwell",
+            "Adam Pally",
+            "Neal McDonough",
+            "Jim Carrey"
+        ],
+        "genres": ["Action", "Adventure", "Comedy"],
+        "image": "images/sonic.jpg"
     }
 ]

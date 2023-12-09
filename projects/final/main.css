@@ -172,6 +172,7 @@ img {
     align-items: center;
     background-color: #2c2828;;
     padding: 20px;
+    width: 100%;
 }
 
 .movie h2, .new-movie-info h2 {

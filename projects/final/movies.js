@@ -1,150 +1,211 @@
-const getMovies = async () => {
-    const link = "https://gazyrubied.github.io/projects/final/json/movie.json";
+const mongoose = require("mongoose");
 
-    try {
-        const response = await fetch(link);
-        return await response.json();
-    } catch (error) {
-        console.log(error);
-    }
-};
+mongoose
+  .connect("mongodb+srv://gazrubied2200:iiZail1e1be5Ngrv@cluster0.0xwqweg.mongodb.net/?retryWrites=true&w=majority", {
+  })
+  .then(() => console.log("Connected to MongoDB"))
+  .catch((error) => console.error("Couldn't connect to MongoDB", error));
 
-const getMovieInfo = (movie) => {
-    let movieDiv = document.createElement("div");
-    movieDiv.classList.add("movies");
-
-    const img = document.createElement('img');
-    img.src = movie.image;
-    img.classList.add('movie-image');
-    movieDiv.appendChild(img);
-
-    const titleContainer = document.createElement('div');
-    titleContainer.classList.add('title-container');
-
-    const title = document.createElement('h3');
-    title.textContent = movie.title;
-    titleContainer.appendChild(title);
-
-    movieDiv.appendChild(titleContainer);
-
-    // Add click event listener for each movie image
-    img.addEventListener('click', () => {
-        showModal(movie.title, movie.Director, movie.Actors,movie.Runtime, movie.Year, movie.Rated, movie.Runtime, movie.Plot);
-    });
-
-    return movieDiv;
-};
-
-
-const newMovie = async () => {
-    let latest = await getMovies();
-    let movieSection = document.getElementById("new-movies-container");
-
-    // Clear existing event listeners
-    movieSection.innerHTML = '';
-
-    latest.forEach(movie => {
-        const movieDiv = getMovieInfo(movie);
-        movieSection.appendChild(movieDiv);
-    });
-};
-
-
-
-const filterMoviesByGenre = async () => {
-    const genreSelect = document.getElementById('genre-select');
-    const selectedGenre = genreSelect.value.toLowerCase();
-
-    let movies = await getMovies();
-
-    if (selectedGenre !== 'all') {
-        movies = movies.filter(movie => {
-            const genres = (movie.Genre || (movie.genres && movie.genres.join(', ')) || '').split(',').map(genre => genre.trim().toLowerCase());
-            return genres.includes(selectedGenre);
-        });
-    }
-
-    // Clear existing movies in the relevant container
-    const movieContainer = document.getElementById('new-movies-container');
-    movieContainer.innerHTML = '';
-
-    // Display filtered movies in the relevant container
-    movies.forEach(movie => movieContainer.appendChild(getMovieInfo(movie)));
-};
-
-
-
-const showModal = (title, director, cast, year, rated, runtime) => {
-    const modal = document.getElementById('myModal');
-    const modalContent = document.getElementById('modal-content');
-
-    // Clear previous content
-    modalContent.innerHTML = '';
-
-    // Create elements to display in the modal
-    const titleElement = document.createElement('h2');
-    titleElement.textContent = title;
-
-    const directorElement = document.createElement('p');
-    directorElement.textContent = `Director: ${director}`;
-
-    const castElement = document.createElement('p');
-    castElement.textContent = `Cast: ${cast}`;
-
-    const yearElement = document.createElement('p');
-    yearElement.textContent = `Year: ${year}`;
-
-    const ratedElement = document.createElement('p');
-    ratedElement.textContent = `Rated: ${rated}`;
-
-    const runtimeElement = document.createElement('p');
-    runtimeElement.textContent = `Runtime: ${runtime}`;
-
-    // Append elements to modal content
-    modalContent.appendChild(titleElement);
-    modalContent.appendChild(directorElement);
-    modalContent.appendChild(castElement);
-    modalContent.appendChild(yearElement);
-    modalContent.appendChild(ratedElement);
-    modalContent.appendChild(runtimeElement);
-
-    // Create a button element
-    const reviewButton = document.createElement('button');
-    reviewButton.textContent = 'Write a Review';
-    reviewButton.classList.add('review-button');
-
-    // Add an event listener to the button for navigation
-    reviewButton.addEventListener('click', () => {
-        // Redirect to the review page or any other desired page
-        window.location.href = 'review.html'; // Change 'review.html' to your desired page
-    });
-
-    // Append the button to the modal content
-    modalContent.appendChild(reviewButton);
-
-    // Display the modal
-    modal.style.display = 'block';
-
-    // Close the modal when the 'x' is clicked
-    const closeModal = document.getElementsByClassName('close')[0];
-    closeModal.onclick = function () {
-        modal.style.display = 'none';
-    };
-
-    // Close the modal when clicking outside of it
-    window.onclick = function (event) {
-        if (event.target == modal) {
-            modal.style.display = 'none';
-        }
-    };
-};
-
-document.addEventListener('DOMContentLoaded', async () => {
-    // Populate movies on page load
-    await newMovie();
-
-    // Add event listener for genre filtering
-    const genreSelect = document.getElementById('genre-select');
-    genreSelect.addEventListener('change', filterMoviesByGenre);
+const movieSchema = new mongoose.Schema({
+  title: String,
+  year: String,
+  rated: String,
+  released: String,
+  runtime: String,
+  plot: String,
+  genre: String,
+  director: String,
+  actors: [String],
+  image: String,
 });
+
+const Movie = mongoose.model("Movie", movieSchema);
+
+const movies = [
+    {
+        "title": "Avatar",
+        "Year": "2009",
+        "Rated": "PG-13",
+        "Released": "18 Dec 2009",
+        "Runtime": "162 min",
+        "Plot": " In the distant future, paralyzed marine Jake Sully becomes an Avatar operator on the moon Pandora.",
+        "Genre": "Action, Adventure, Fantasy",
+        "Director": "James Cameron",
+        "image": "images/avatar.jpg"
+    },
+    {
+        "title": "Doctor Strange",
+        "Year": "2016",
+        "Rated": "R",
+        "Released": "04 Nov 2016",
+        "Runtime": "122 min",
+        "Plot": "Brilliant but arrogant surgeon Dr. Stephen Strange loses the use of his hands in a car accident. Desperate to heal, he discovers the mystical arts and becomes the Sorcerer Supreme",
+        "Genre": "Action, Adventure, Fantasy",
+        "Director": "Scott Derrickson",
+        "Actors": "Rachel McAdams, Benedict Cumberbatch, Mads Mikkelsen, Tilda Swinton",
+        "image": "images/strange.jpg"
+    },
+    {
+        "title": "The Avengers",
+        "Year": "2012",
+        "Rated": "PG-13",
+        "Released": "04 May 2012",
+        "Runtime": "143 min",
+        "Plot": " Earth's mightiest heroes, including Iron Man, Captain America, Thor, and the Hulk, must come together to stop Loki and an alien army",
+        "Genre": "Action, Sci-Fi, Thriller",
+        "Director": "Joss Whedon",
+        "Writer": "Joss Whedon (screenplay), Zak Penn (story), Joss Whedon (story)",
+        "Actors": "Robert Downey Jr., Chris Evans, Mark Ruffalo, Chris Hemsworth",
+        "image": "images/avengers.jpg"
+    },
+    {
+        "title": "The Wolf of Wall Street",
+        "Year": "2013",
+        "Rated": "R",
+        "Released": "25 Dec 2013",
+        "Runtime": "180 min",
+        "Plot": "Plot: Based on the true story of Jordan Belfort, a stockbroker who rises to wealth but becomes entangled in crime and corruption.",
+        "Genre": "Biography, Comedy, Crime",
+        "Director": "Martin Scorsese",
+        "Writer": "Terence Winter (screenplay), Jordan Belfort (book)",
+        "Actors": "Leonardo DiCaprio, Jonah Hill, Margot Robbie, Matthew McConaughey",
+        "image": "images/wolf.jpg"
+    },
+    {
+        "title": "Interstellar",
+        "Year": "2014",
+        "Rated": "PG-13",
+        "Released": "07 Nov 2014",
+        "Runtime": "169 min",
+        "Plot": "In a future where Earth is dying, former NASA pilot Cooper leads a space mission through a wormhole to find a new habitable planet for humanity.",
+        "Genre": "Adventure, Drama, Sci-Fi",
+        "Director": "Christopher Nolan",
+        "Writer": "Jonathan Nolan, Christopher Nolan",
+        "Actors": "Ellen Burstyn, Matthew McConaughey, Mackenzie Foy, John Lithgow",
+        "image": "images/interstellar.jpg"
+    },
+    {
+        "title": "Gretel & Hansel",
+        "Year": "2020",
+        "Actors": [
+            "Sophia Lillis", "Sammy Leakey", "Charles Babalola", "Jessica De Gouw", "Alice Krige"
+        ],
+        "genres": ["Fantasy", "Horror"],
+        "image": "images/hansel.jpg"
+    },
+    {
+        "title": "Sonic the Hedgehog",
+        "Year": "2020",
+        "Director": [
+            "James Marsden",
+            "Ben Schwartz",
+            "Tika Sumpter",
+            "Natasha Rothwell",
+            "Adam Pally",
+            "Neal McDonough",
+            "Jim Carrey"
+        ],
+        "Plot": "Sonic, a blue anthropomorphic hedgehog, teams up with a small-town sheriff to stop the evil Dr. Robotnik",
+        "genres": ["Action", "Adventure", "Comedy"],
+        "image": "images/sonic.jpg"
+    },
+    {
+        "title": "The Shawshank Redemption",
+        "Year": "1994",
+        "Rated": "R",
+        "Released": "14 Oct 1994",
+        "Runtime": "142 min",
+        "Genre": "Drama",
+        "Plot": " Andy Dufresne, wrongly convicted of murder, maintains hope and forms deep friendships during his imprisonment at Shawshank.",
+        "Director": "Frank Darabont",
+        "Actors": "Tim Robbins, Morgan Freeman, Bob Gunton, William Sadler",
+        "image": "images/shawshank_redemption.jpg"
+    },
+    {
+        "title": "Inception",
+        "Year": "2010",
+        "Rated": "PG-13",
+        "Released": "16 Jul 2010",
+        "Runtime": "148 min",
+        "Genre": "Action, Adventure, Sci-Fi",
+        "Plot": "Dom Cobb, a skilled thief, enters the dreams of others to steal their deepest secrets.",
+        "Director": "Christopher Nolan",
+        "Actors": "Leonardo DiCaprio, Joseph Gordon-Levitt, Ellen Page, Tom Hardy",
+        "image": "images/inception.jpg"
+    },
+    {
+        "title": "Pulp Fiction",
+        "Year": "1994",
+        "Rated": "R",
+        "Released": "14 Oct 1994",
+        "Runtime": "154 min",
+        "Plot":"The film weaves interconnected stories of crime, redemption, and absurdity, featuring hitmen, a boxer, a mob boss, and others.",
+        "Genre": "Crime, Drama",
+        "Director": "Quentin Tarantino",
+        "Actors": "John Travolta, Uma Thurman, Samuel L. Jackson, Bruce Willis",
+        "image": "images/pulp_fiction.jpg"
+    },
+    {
+        "title": "The Dark Knight",
+        "Year": "2008",
+        "Rated": "PG-13",
+        "Released": "18 Jul 2008",
+        "Runtime": "152 min",
+        "Plot": " Batman faces the Joker, a criminal mastermind who seeks chaos in Gotham City. ",
+        "Genre": "Action, Crime, Drama",
+        "Director": "Christopher Nolan",
+        "Actors": "Christian Bale, Heath Ledger, Aaron Eckhart, Michael Caine",
+        "image": "images/dark_knight.jpg"
+    },
+    {
+        "title": "Forrest Gump",
+        "Year": "1994",
+        "Rated": "PG-13",
+        "Released": "06 Jul 1994",
+        "Runtime": "142 min",
+        "Plot":" Forrest Gump, a man with low intelligence but a kind heart, inadvertently influences several defining moments in American history.",
+        "Genre": "Drama, Romance",
+        "Director": "Robert Zemeckis",
+        "Actors": "Tom Hanks, Robin Wright, Gary Sinise, Sally Field",
+        "image": "images/forrest_gump.jpg"
+    },
+    {
+        "title": "The Matrix",
+        "Year": "1999",
+        "Rated": "R",
+        "Released": "31 Mar 1999",
+        "Runtime": "136 min",
+        "Plot":" Neo, a computer hacker, discovers the truth about reality",
+        "Genre": "Action, Sci-Fi",
+        "Director": "Lana Wachowski, Lilly Wachowski",
+        "Actors": "Keanu Reeves, Laurence Fishburne, Carrie-Anne Moss, Hugo Weaving",
+        "image": "images/matrix.jpg"
+    },
+    {
+        "title": "Schindler's List",
+        "Year": "1993",
+        "Rated": "R",
+        "Released": "04 Feb 1994",
+        "Runtime": "195 min",
+        "Plot": "Oskar Schindler, a German businessman, saves over a thousand Polish Jews during the Holocaust by employing them in his enamelware factory.",
+        "Genre": "Biography, Drama, History",
+        "Director": "Steven Spielberg",
+        "Actors": "Liam Neeson, Ben Kingsley, Ralph Fiennes, Caroline Goodall",
+        "image": "images/schindlers_list.jpg"
+    },
+    {
+        "title": "Fight Club",
+        "Year": "1999",
+        "Rated": "R",
+        "Released": "15 Oct 1999",
+        "Runtime": "139 min",
+        "Plot":" An insomniac office worker and a soap salesman form an underground fight club as a form of male bonding and a reaction against the emptiness of consumer culture.",
+        "Genre": "Drama",
+        "Director": "David Fincher",
+        "Actors": "Edward Norton, Jared Leto, Brad Pitt, Tilda Swinton",
+        "image": "images/fight_club.jpg"
+        
+    }
+];
+
 

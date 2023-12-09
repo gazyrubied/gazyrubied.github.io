@@ -15,7 +15,7 @@ const showEmailResults = async (e) => {
   } catch (error) {
     console.log(error);
     resultElement.innerHTML = "Sorry, your email couldn't be sent";
-    resultElement.style.color = "red"; // Optionally, you can set color for error
+    resultElement.style.color = "red"; 
   }
 };
 const getEmailResults = async () => {

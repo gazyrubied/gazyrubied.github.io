@@ -7,118 +7,125 @@ app.use(express.static("public"));
 app.use(express.json());
 const cors = require("cors");
 app.use(cors());
-const upload = multer({ dest: __dirname + "/public/images" });
+const upload = multer({ dest: __dirname + "/images" });
 
 mongoose
-  .connect("mongodb+srv://gazrubied2200:MVyBoTc0h4PRPoGo@cluster0.0xwqweg.mongodb.net/?retryWrites=true&w=majority", {
-  })
+  .connect("mongodb+srv://gazrubied2200:iiZail1e1be5Ngrv@cluster0.0xwqweg.mongodb.net/?retryWrites=true&w=majority", {})
   .then(() => console.log("Connected to MongoDB"))
   .catch((error) => console.error("Couldn't connect to MongoDB", error));
 
-const soccerSchema = new mongoose.Schema({
-  name: String,
-  team: String,
-  position: String,
-  nationality: String,
-  goalsScored: Number,
-  assists: Number,
-  achievements: [String],
-  img: String,
+const movieSchema = new mongoose.Schema({
+  title: String,
+  year: String,
+  rated: String,
+  released: String,
+  runtime: String,
+  plot: String,
+  genre: String,
+  director: String,
+  actors: [String],
+  image: String,
 });
 
-const Player = mongoose.model("Player", soccerSchema);
+const Movie = mongoose.model("Movie", movieSchema);
 
-app.get("/api/players", (req, res) => {
-  getPlayers(res);
+app.get("/api/movies", async (req, res) => {
+  getMovies(res);
 });
 
-const getPlayers = async (res) => {
-  const players = await Player.find();
-  res.send(players);
+const getMovies = async (res) => {
+  const movies = await Movie.find();
+  res.send(movies);
 };
 
-app.post("/api/players", upload.single("img"), (req, res) => {
-  const result = validatePlayer(req.body);
+app.post("/api/movies", upload.single("img"), async (req, res) => {
+  const result = validateMovie(req.body);
 
   if (result.error) {
     res.status(400).send(result.error);
     return;
   }
 
-  const player = new Player({
-    name: req.body.name,
-    team: req.body.team,
-    position: req.body.position,
-    nationality: req.body.nationality,
-    goalsScored: req.body.goalsScored,
-    assists: req.body.assists,
-    achievements: req.body.achievements.split(","),
+  const movie = new Movie({
+    title: req.body.title,
+    year: req.body.year,
+    rated: req.body.rated,
+    released: req.body.released,
+    runtime: req.body.runtime,
+    plot: req.body.plot,
+    genre: req.body.genre,
+    director: req.body.director,
+    actors: req.body.actors,
   });
 
   if (req.file) {
-    player.img = "images/" + req.file.filename;
+    movie.image = "images/" + req.file.filename;
   }
 
-  createPlayer(res, player);
+  createMovie(res, movie);
 });
 
-const createPlayer = async (res, player) => {
-  const result = await player.save();
-  res.send(player);
+const createMovie = async (res, movie) => {
+  const result = await movie.save();
+  res.send(movie);
 };
 
-app.put("/api/players/:id", upload.single("img"), async (req, res) => {
-  const result = validatePlayer(req.body);
+app.put("/api/movies/:id", upload.single("img"), async (req, res) => {
+  const result = validateMovie(req.body);
 
   if (result.error) {
     res.status(400).send(result.error.details[0].message);
     return;
   }
 
-  updatePlayer(req, res);
+  updateMovie(req, res);
 });
 
-const updatePlayer = async (req, res) => {
+const updateMovie = async (req, res) => {
   let fieldsToUpdate = {
-    name: req.body.name,
-    team: req.body.team,
-    position: req.body.position,
-    nationality: req.body.nationality,
-    goalsScored: req.body.goalsScored,
-    assists: req.body.assists,
-    achievements: req.body.achievements.split(","),
+    title: req.body.title,
+    year: req.body.year,
+    rated: req.body.rated,
+    released: req.body.released,
+    runtime: req.body.runtime,
+    plot: req.body.plot,
+    genre: req.body.genre,
+    director: req.body.director,
+    actors: req.body.actors,
   };
 
   if (req.file) {
-    fieldsToUpdate.img = "images/" + req.file.filename;
+    fieldsToUpdate.image = "images/" + req.file.filename;
   }
 
-  const result = await Player.updateOne({ _id: req.params.id }, fieldsToUpdate);
-  const updatedPlayer = await Player.findById(req.params.id);
-  res.send(updatedPlayer);
+  const result = await Movie.updateOne({ _id: req.params.id }, fieldsToUpdate);
+  const updatedMovie = await Movie.findById(req.params.id);
+  res.send(updatedMovie);
 };
 
-app.delete("/api/players/:id", upload.single("img"), (req, res) => {
-  removePlayer(res, req.params.id);
+app.delete("/api/movies/:id", upload.single("img"), async (req, res) => {
+  removeMovie(res, req.params.id);
 });
 
-const removePlayer = async (res, id) => {
-  const player = await Player.findByIdAndDelete(id);
-  res.send(player);
+const removeMovie = async (res, id) => {
+  const movie = await Movie.findByIdAndDelete(id);
+  res.send(movie);
 };
 
-const validatePlayer = (player) => {
+const validateMovie = (movie) => {
   const schema = Joi.object({
-    name: Joi.string().min(3).required(),
-    team: Joi.string().min(3).required(),
-    position: Joi.string().min(3).required(),
-    nationality: Joi.string().min(3).required(),
-    goalsScored: Joi.number().integer().min(0).required(),
-    assists: Joi.number().integer().min(0).required(),
-    achievements: Joi.string().allow(''),
+    title: Joi.string().min(3).required(),
+    year: Joi.string().required(),
+    rated: Joi.string().required(),
+    released: Joi.string().required(),
+    runtime: Joi.string().required(),
+    plot: Joi.string().required(),
+    genre: Joi.string().required(),
+    director: Joi.string().required(),
+    actors: Joi.array().items(Joi.string()).required(),
   });
 
-  return schema.validate(player);
+  return schema.validate(movie);
 };
 
 app.listen(3000, () => {

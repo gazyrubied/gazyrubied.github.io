@@ -1,5 +1,5 @@
 const getMovies = async () => {
-    const link = "https://gazyrubied.github.io/projects/final/json/movies.json";
+    const link = "https://gazyrubied.github.io/projects/final/json/movie.json";
 
     try {
         const response = await fetch(link);

@@ -1,27 +1,19 @@
-document.getElementById("review-form").addEventListener("submit", function (e) {
-    e.preventDefault(); 
+const getReview = async () => {
+    try {
+         return (await fetch("api/reviews/")).json();
+    } catch (error) {
 
-    const successContainer = document.getElementById("success");
-    const reviewContent = document.getElementById("review-content");
+    }
+};
 
-    const title = document.getElementById("review-title").value;
-    const rating = document.getElementById("movie-rating").value;
-    const reviewText = document.getElementById("movie-review-text").value;
-    const tags = document.getElementById("movie-tags").value;
+const showReviews = async () => {
+    let reviews = await getReviews();
+    let reviewDiv = document.getElementById("review-list");
+    console.log(reviews);
 
-    const successMessage = `
-    Title: ${title}
-    Rating: ${rating}
-    Review: ${reviewText}
-    Tags: ${tags}
-    `;
+    h3 = document.createElement("h3");
+    h3.innerHTML = review.name;
+    section.append(h3);
+}
 
-    reviewContent.textContent = successMessage;
-    successContainer.classList.remove("hidden");
-});
-
-document.getElementById("submit-button").addEventListener("click", function () {
-    document.getElementById("review-form").submit();
-});
-
-
+windows

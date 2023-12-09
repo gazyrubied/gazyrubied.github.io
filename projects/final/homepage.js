@@ -100,6 +100,18 @@ const showModal = (title, director, cast, year, rated, runtime) => {
         modal.style.display = 'none';
     };
 
+    const submitReviewButton = document.getElementById('submitReview');
+    submitReviewButton.addEventListener('click', () => {
+        const reviewTitle = document.getElementById('reviewTitle').value;
+        const reviewContent = document.getElementById('reviewContent').value;
+
+        // Handle the review submission here
+
+        // Optionally, close the modal or reset the form after submission
+        // modal.style.display = 'none';
+        // document.getElementById('reviewForm').reset();
+    });
+
     // Close the modal when clicking outside of it
     window.onclick = function (event) {
         if (event.target == modal) {
@@ -107,6 +119,5 @@ const showModal = (title, director, cast, year, rated, runtime) => {
         }
     };
 };
-
 
 window.onload = displayMovies;

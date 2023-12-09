@@ -1,5 +1,15 @@
 [
     {
+        "title": "Avatar",
+        "Year": "2009",
+        "Rated": "PG-13",
+        "Released": "18 Dec 2009",
+        "Runtime": "162 min",
+        "Genre": "Action, Adventure, Fantasy",
+        "Director": "James Cameron",
+        "image": "images/avatar.jpg"
+    },
+    {
         "title": "Doctor Strange",
         "Year": "2016",
         "Rated": "R",
@@ -23,21 +33,142 @@
         "image": "images/avengers.jpg"
     },
     {
-        "title": "Robots",
-        "Director": "Steven Spielberg",
+        "title": "The Wolf of Wall Street",
+        "Year": "2013",
         "Rated": "R",
-        "Genre": "Action, Sci-Fi, Thriller",
-        "Runtime": "156 min",
-        "Actors": ["Will Smith", "Rosario Dawson", "Channing Tatum"],
-        "Release": 2022,
-        "image": "images/robot movie.jpg"
+        "Released": "25 Dec 2013",
+        "Runtime": "180 min",
+        "Genre": "Biography, Comedy, Crime",
+        "Director": "Martin Scorsese",
+        "Writer": "Terence Winter (screenplay), Jordan Belfort (book)",
+        "Actors": "Leonardo DiCaprio, Jonah Hill, Margot Robbie, Matthew McConaughey",
+        "image": "images/wolf.jpg"
     },
     {
-        "title": "Space Odyssey",
-        "Director": "Ridley Scott",
-        "Genre": "Action, Sci-Fi, Thriller",
-        "Actors": ["Matt Damon", "Jessica Chastain", "Kristen Wiig"],
-        "Release": 2015,
-        "image": "images/space movie.jpg"
+        "title": "Interstellar",
+        "Year": "2014",
+        "Rated": "PG-13",
+        "Released": "07 Nov 2014",
+        "Runtime": "169 min",
+        "Genre": "Adventure, Drama, Sci-Fi",
+        "Director": "Christopher Nolan",
+        "Writer": "Jonathan Nolan, Christopher Nolan",
+        "Actors": "Ellen Burstyn, Matthew McConaughey, Mackenzie Foy, John Lithgow",
+        "image": "images/interstellar.jpg"
+    },
+    {
+        "title": "Gretel & Hansel",
+        "Year": 2020,
+        "Actors": [
+            "Sophia Lillis", "Sammy Leakey", "Charles Babalola", "Jessica De Gouw", "Alice Krige"
+        ],
+        "genres": ["Fantasy", "Horror"],
+        "image": "images/hansel.jpg"
+    },
+    {
+        "title": "Sonic the Hedgehog",
+        "Year": 2020,
+        "cast": [
+            "James Marsden",
+            "Ben Schwartz",
+            "Tika Sumpter",
+            "Natasha Rothwell",
+            "Adam Pally",
+            "Neal McDonough",
+            "Jim Carrey"
+        ],
+        "genres": ["Action", "Adventure", "Comedy"],
+        "image": "images/sonic.jpg"
+    },
+    {
+        "title": "The Shawshank Redemption",
+        "Year": "1994",
+        "Rated": "R",
+        "Released": "14 Oct 1994",
+        "Runtime": "142 min",
+        "Genre": "Drama",
+        "Director": "Frank Darabont",
+        "image": "images/shawshank_redemption.jpg"
+    },
+    {
+        "title": "The Godfather",
+        "Year": "1972",
+        "Rated": "R",
+        "Released": "24 Mar 1972",
+        "Runtime": "175 min",
+        "Genre": "Crime, Drama",
+        "Director": "Francis Ford Coppola",
+        "image": "images/godfather.jpg"
+    },
+    {
+        "title": "Inception",
+        "Year": "2010",
+        "Rated": "PG-13",
+        "Released": "16 Jul 2010",
+        "Runtime": "148 min",
+        "Genre": "Action, Adventure, Sci-Fi",
+        "Director": "Christopher Nolan",
+        "image": "images/inception.jpg"
+    },
+    {
+        "title": "Pulp Fiction",
+        "Year": "1994",
+        "Rated": "R",
+        "Released": "14 Oct 1994",
+        "Runtime": "154 min",
+        "Genre": "Crime, Drama",
+        "Director": "Quentin Tarantino",
+        "image": "images/pulp_fiction.jpg"
+    },
+    {
+        "title": "The Dark Knight",
+        "Year": "2008",
+        "Rated": "PG-13",
+        "Released": "18 Jul 2008",
+        "Runtime": "152 min",
+        "Genre": "Action, Crime, Drama",
+        "Director": "Christopher Nolan",
+        "image": "images/dark_knight.jpg"
+    },
+    {
+        "title": "Forrest Gump",
+        "Year": "1994",
+        "Rated": "PG-13",
+        "Released": "06 Jul 1994",
+        "Runtime": "142 min",
+        "Genre": "Drama, Romance",
+        "Director": "Robert Zemeckis",
+        "image": "images/forrest_gump.jpg"
+    },
+    {
+        "title": "The Matrix",
+        "Year": "1999",
+        "Rated": "R",
+        "Released": "31 Mar 1999",
+        "Runtime": "136 min",
+        "Genre": "Action, Sci-Fi",
+        "Director": "Lana Wachowski, Lilly Wachowski",
+        "image": "images/matrix.jpg"
+    },
+    {
+        "title": "Schindler's List",
+        "Year": "1993",
+        "Rated": "R",
+        "Released": "04 Feb 1994",
+        "Runtime": "195 min",
+        "Genre": "Biography, Drama, History",
+        "Director": "Steven Spielberg",
+        "image": "images/schindlers_list.jpg"
+    },
+    {
+        "title": "Fight Club",
+        "Year": "1999",
+        "Rated": "R",
+        "Released": "15 Oct 1999",
+        "Runtime": "139 min",
+        "Genre": "Drama",
+        "Director": "David Fincher",
+        "image": "images/fight_club.jpg"
     }
 ]
+

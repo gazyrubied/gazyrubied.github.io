@@ -224,9 +224,6 @@ img {
     margin-bottom: 10px;
     /* Add positioning properties as needed */
 }
-.hidden{
-    display: none;
-}
 
 /* Form Styling */
 #review-form, .contact-form-container {
@@ -238,7 +235,11 @@ img {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     font-size: 16px;
 }
-
+.message {
+    display: block;
+    color: red;
+    margin-top: 10px;
+  }
 #success-message,
 #error-message {
     margin-top: 10px;

@@ -64,20 +64,5 @@
         ],
         "genres": ["Fantasy", "Horror"],
         "image": "images/hansel.jpg"
-    },
-    {
-        "title": "Sonic the Hedgehog",
-        "Year": 2020,
-        "cast": [
-            "James Marsden",
-            "Ben Schwartz",
-            "Tika Sumpter",
-            "Natasha Rothwell",
-            "Adam Pally",
-            "Neal McDonough",
-            "Jim Carrey"
-        ],
-        "genres": ["Action", "Adventure", "Comedy"],
-        "image": "images/sonic.jpg"
     }
 ]

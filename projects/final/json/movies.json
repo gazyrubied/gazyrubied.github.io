@@ -10,6 +10,17 @@
       "image": "images/avatar.jpg"
     },
     {
+        "title": "Doctor Strange",
+        "Year": "2016",
+        "Rated": "R",
+        "Released": "04 Nov 2016",
+        "Runtime": "122 min",
+        "Genre": "Action, Adventure, Fantasy",
+        "Director": "Scott Derrickson",
+        "Actors": "Rachel McAdams, Benedict Cumberbatch, Mads Mikkelsen, Tilda Swinton",
+        "image": "images/strange.jpg"
+    },
+    {
         "title": "The Avengers",
         "Year": "2012",
         "Rated": "PG-13",

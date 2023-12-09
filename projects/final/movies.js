@@ -1,5 +1,5 @@
 const getMovies = async () => {
-    const link = "https://gazyrubied.github.io/projects/final/json/movie.json";
+    const link = "https://gazyrubied.github.io/projects/final/json/movies.json";
 
     try {
         const response = await fetch(link);
@@ -18,12 +18,18 @@ const getMovieInfo = (movie) => {
     img.classList.add('movie-image');
     movieDiv.appendChild(img);
 
+    const titleContainer = document.createElement('div');
+    titleContainer.classList.add('title-container');
+
     const title = document.createElement('h3');
-    title.textContent = movie.title;
-    movieDiv.appendChild(title);
+    title.textContent = movie.Title;
+    titleContainer.appendChild(title);
+
+    movieDiv.appendChild(titleContainer);
 
     return movieDiv;
 };
+
 
 const newMovie = async () => {
     let latest = await getMovies();
@@ -136,4 +142,3 @@ document.addEventListener('DOMContentLoaded', async () => {
     const genreSelect = document.getElementById('genre-select');
     genreSelect.addEventListener('change', filterMoviesByGenre);
 });
-

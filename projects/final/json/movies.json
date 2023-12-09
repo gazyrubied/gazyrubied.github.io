@@ -55,14 +55,5 @@
         "Writer": "Jonathan Nolan, Christopher Nolan",
         "Actors": "Ellen Burstyn, Matthew McConaughey, Mackenzie Foy, John Lithgow",
         "image": "images/interstellar.jpg"
-    },
-    {
-        "title": "Gretel & Hansel",
-        "Year": 2020,
-        "Actors": [
-            "Sophia Lillis", "Sammy Leakey", "Charles Babalola", "Jessica De Gouw", "Alice Krige"
-        ],
-        "genres": ["Fantasy", "Horror"],
-        "image": "images/hansel.jpg"
     }
 ]

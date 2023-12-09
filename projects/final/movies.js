@@ -22,10 +22,15 @@ const getMovieInfo = (movie) => {
     titleContainer.classList.add('title-container');
 
     const title = document.createElement('h3');
-    title.textContent = movie.Title;
+    title.textContent = movie.title;
     titleContainer.appendChild(title);
 
     movieDiv.appendChild(titleContainer);
+
+    // Add click event listener for each movie image
+    img.addEventListener('click', () => {
+        showModal(movie.title, movie.Director, movie.Actors,movie.Runtime, movie.Year, movie.Rated, movie.Runtime, movie.Plot);
+    });
 
     return movieDiv;
 };
@@ -35,18 +40,16 @@ const newMovie = async () => {
     let latest = await getMovies();
     let movieSection = document.getElementById("new-movies-container");
 
+    // Clear existing event listeners
+    movieSection.innerHTML = '';
+
     latest.forEach(movie => {
         const movieDiv = getMovieInfo(movie);
         movieSection.appendChild(movieDiv);
-
-        // Add click event listener for each movie image
-        const image = movieDiv.querySelector('.movie-image');
-        image.addEventListener('click', () => {
-            // Show modal and display movie information
-            showModal(movie.title, movie.Director, movie.Actors, movie.Year, movie.Rated, movie.Runtime);
-        });
     });
 };
+
+
 
 const filterMoviesByGenre = async () => {
     const genreSelect = document.getElementById('genre-select');
@@ -56,7 +59,7 @@ const filterMoviesByGenre = async () => {
 
     if (selectedGenre !== 'all') {
         movies = movies.filter(movie => {
-            const genres = movie.Genre.split(',').map(genre => genre.trim().toLowerCase());
+            const genres = (movie.Genre || (movie.genres && movie.genres.join(', ')) || '').split(',').map(genre => genre.trim().toLowerCase());
             return genres.includes(selectedGenre);
         });
     }
@@ -68,6 +71,8 @@ const filterMoviesByGenre = async () => {
     // Display filtered movies in the relevant container
     movies.forEach(movie => movieContainer.appendChild(getMovieInfo(movie)));
 };
+
+
 
 const showModal = (title, director, cast, year, rated, runtime) => {
     const modal = document.getElementById('myModal');
@@ -142,3 +147,4 @@ document.addEventListener('DOMContentLoaded', async () => {
     const genreSelect = document.getElementById('genre-select');
     genreSelect.addEventListener('change', filterMoviesByGenre);
 });
+

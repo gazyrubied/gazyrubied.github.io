@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="review.css">
+    <script src="review.js"></script>
+    <title>CineReview</title>
+</head>
+<body>
+    <header id="logo">
+      <a href="index.html">
+        <img src="images/logo.jpg" alt="CineReview Logo">
+    </a>
+        <h1 class="title"><a href="homepage.html">CineReview</a></h1>
+        <nav class="main-nav">
+            <div id="site-toggle">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="movies.html">Movies</a></li>
+                <li><a href="review.html">Add Review</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="user.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div id="add-edit-review-container" class="dialog transparent">
+        <span class="close">&times;</span>
+        <h3 id="add-edit-title">Create a Review</h3>
+        <form id="add-edit-review-form" method="post">
+            <input type="hidden" name="_id" value="-1" />
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required />
+
+            <label for="title">Title:</label>
+            <input type="text" id="title" name="title" required />
+
+            <label for="rating">Rating:</label>
+            <input type="number" id="rating" name="rating" required />
+
+            <label for="analysis">Analysis:</label>
+            <textarea id="analysis" name="analysis" required></textarea>
+
+            <label for="img">Image:</label>
+            <input type="file" name="img" />
+
+            <button type="submit">Submit</button>
+            <p id="error-message" class="error-message"></p>
+        </form>
+    </div>

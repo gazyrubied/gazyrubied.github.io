@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="main.css">
+    <title>CineReview</title>
+</head>
+<body>
+    <header id="logo">
+        <a href="index.html">
+            <img src="images/logo.jpg">
+        </a>
+        <h1 class="title">CineReview</h1>
+        <nav class="main-nav">
+            <div id="site-toggle">
+                <div></div>
+                <div></div> 
+                <div></div>
+            </div>
+            <ul>
+                <li><a href="index.html">Home Page</a></li>
+                <li><a href="movies.html">Movies</a></li>
+                <li><a href="review.html">Add Review</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="user.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="welcome-section">
+        <div class="welcome-content">
+            <h2>Welcome to CineReview</h2>
+            <p>Discover, and Review Your Favorite Movies</p>
+            <a href="movies.html" class="cta-button">Explore Top Movies</a>
+            <a href="review.html" class="cta-button">Start A Review</a>
+        </div>
+    </div>
+   
+    <div id="top-movies">
+        <h2 class="top-title">Trending Movies</h2> 
+        <div class="top-image" id="movies-container">
+ 
+        </div>
+    </div>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+         
+          <span class="close">&times;</span>
+          <div id="modal-content"></div>
+          <div id="reviewForm" style="display: none;">
+            <h3>Write a Review</h3>
+            <form id="reviewForm">
+                <label for="reviewTitle">Review Title:</label>
+                <input type="text" id="reviewTitle" name="reviewTitle" required>
+        
+                <label for="reviewContent">Your Review:</label>
+                <textarea id="reviewContent" name="reviewContent" rows="4" required></textarea>
+        
+                <button type="button" id="submitReview">Submit Review</button>
+            </form>
+        </div>
+        </div>
+      </div>
+      
+
+    <script src="homepage.js"></script>
+</body>
+</html>
